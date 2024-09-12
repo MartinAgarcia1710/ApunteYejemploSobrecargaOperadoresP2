@@ -134,7 +134,7 @@
     <ClInclude Include="Persona.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\OneDrive\Escritorio\Sobrecarga de operadores.pdf" />
+    <None Include="Sobrecarga de operadores.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
