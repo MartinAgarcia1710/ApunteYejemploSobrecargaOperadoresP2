@@ -1,6 +1,5 @@
 #pragma once
 
-
 	class Persona
 	{
 		public:
@@ -17,14 +16,9 @@
 			float getSueldo();
 
 			bool operator==(const Persona p2);
-
-
 			bool operator<(const Persona p2);
-			
-			
 			int operator+(const Persona p2);
 			void operator=(const Persona p2);
-
 
 		private:
 			char _nombre[50];

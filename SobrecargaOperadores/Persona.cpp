@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Persona.h"
 #include <string>
+
 Persona::Persona(const char* nombre, const char* apellido, int edad)
 {
 	strcpy_s(this->_nombre, nombre);
@@ -53,34 +54,37 @@ int Persona::getEdad()
 	return this->_edad;
 }
 
-	bool Persona::operator==(const Persona p2)
+bool Persona::operator==(const Persona p2)
+{
+	 if (this->_edad == p2._edad) {
+		return true;
+	}
+	else 
 	{
-		 if (this->_edad == p2._edad) {
-			return true;
-		}
-		else 
-		{
-			return false;
-		}
+		return false;
+	}
 	
-		return this->_edad == p2._edad;
+	return this->_edad == p2._edad;
+}
+
+bool Persona::operator<(const Persona p2)
+{
+	/* if (strcmp(this->_nombre, p2._nombre) < 0) {
+		return true;
 	}
-
-	bool Persona::operator<(const Persona p2)
-	{
-		return strcmp(this->_nombre, p2._nombre) < 0;
+	else {
+		return false;
 	}
+	*/
+	return strcmp(this->_nombre, p2._nombre) < 0;
+}
 
+int Persona::operator+(const Persona p2)
+{
+	return this->_edad + p2._edad;
+}
 
-
-	int Persona::operator+(const Persona p2)
-	{
-		return this->_edad + p2._edad;
-	}
-
-
-
-	void Persona::operator=(const Persona p2)
-	{
-		this->_edad = p2._edad;
-	}
+void Persona::operator=(const Persona p2)
+{
+	this->_edad = p2._edad;
+}
