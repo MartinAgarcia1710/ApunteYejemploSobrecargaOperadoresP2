@@ -4,9 +4,10 @@
 
 Persona::Persona(const char* nombre, const char* apellido, int edad)
 {
-	strcpy_s(this->_nombre, nombre);
-	strcpy_s(this->_apellido, apellido);
-	this->_edad = edad;
+	setNombre(nombre);
+	setApellido(apellido);
+	setEdad(edad);
+	
 }
 void Persona::setNombre(const char* nombre)
 {
@@ -20,12 +21,26 @@ void Persona::setApellido(const char* apellido)
 
 void Persona::setEdad(int edad)
 {
-	this->_edad = edad;
+	if (edad > 0)
+	{
+		this->_edad = edad;
+	}
+	else
+	{
+		this->_edad = 1;
+	}
 }
 
 void Persona::setSueldo(float sueldo)
 {
-	this->_sueldo = sueldo;
+	if (sueldo > 0) 
+	{
+		this->_sueldo = sueldo;
+	}
+	else
+	{
+		this->_sueldo = 1;
+	}
 }
 
 float Persona::getSueldo() {
@@ -76,6 +91,8 @@ bool Persona::operator<(const Persona p2)
 		return false;
 	}
 	*/
+
+	//Alternativa para ahorrar código
 	return strcmp(this->_nombre, p2._nombre) < 0;
 }
 

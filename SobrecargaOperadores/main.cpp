@@ -17,8 +17,6 @@ std::ostream& operator<<(std::ostream& os, Persona p)
 		Persona nick("Nick", "Riviera", 45);
 		Persona bart("Bart", "Simpson", 10);
 		Persona rafa("Rafa", "Gorgory", 8);
-		lalo.setSueldo(10000);
-		nick.setSueldo(15000);
 	
 		std::cout << "Sobre carga de operadores de comparacion (== y <)\n";
 		if (lalo == nick) {
